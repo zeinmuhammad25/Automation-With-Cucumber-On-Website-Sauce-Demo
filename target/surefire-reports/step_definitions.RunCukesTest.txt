@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: step_definitions.RunCukesTest
+-------------------------------------------------------------------------------
+Tests run: 32, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 113.506 sec <<< FAILURE!
+Then User see error "Epic sadface: Username is requir" on login page(|  | password | Epic sadface: Username is requir |)  Time elapsed: 0.005 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...: Username is requir[]> but was:<...: Username is requir[ed]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at step_definitions.LoginSteps.verifyErorMassage(LoginSteps.java:47)
+	at ?.Then User see error "Epic sadface: Username is requir" on login page(features/HomePage.feature:13)
+
+|  | password | Epic sadface: Username is requir |  Time elapsed: 0.006 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...: Username is requir[]> but was:<...: Username is requir[ed]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at step_definitions.LoginSteps.verifyErorMassage(LoginSteps.java:47)
+	at ?.Then User see error "Epic sadface: Username is requir" on login page(features/HomePage.feature:13)
+
