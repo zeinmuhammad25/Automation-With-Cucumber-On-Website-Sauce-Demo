@@ -2,7 +2,6 @@ package step_definitions;
 
 import com.zein.pageObject.InventoriPage;
 import com.zein.pageObject.LoginPage;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -10,7 +9,6 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class LoginSteps {
     private WebDriver webDriver;
@@ -34,7 +32,7 @@ public class LoginSteps {
         loginPage.clickLogin();
     }
 
-    @Then("user see dashboard")
+    @Then("User is already on the landing page")
     public void isDashboardIsDisplayed() {
         InventoriPage inventoriPage = new InventoriPage(webDriver);
         Assert.assertTrue(inventoriPage.isDisplayed());
