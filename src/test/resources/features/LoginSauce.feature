@@ -5,7 +5,7 @@ Feature: Login
   Scenario: Normal Login
     Given user open the web page
     When User input "standard_user" as username and "secret_sauce" as password
-    Then  user see dashboard
+    Then  User is already on the landing page
 
   Scenario Outline: Invalid Login
     Given user open the web page
