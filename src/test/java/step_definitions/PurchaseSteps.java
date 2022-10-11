@@ -25,6 +25,7 @@ public class PurchaseSteps {
         InventoriPage.clickBackToProduct();
         Thread.sleep(1000);
     }
+    
 
     @Then("User will see a basket that has been filled with items that have been checkout")
     public void clickItemCartAndCheckout() throws InterruptedException {
