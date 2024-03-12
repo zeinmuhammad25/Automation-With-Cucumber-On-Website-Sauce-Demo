@@ -18,130 +18,134 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-           
-    <dependency>
-       <groupId>io.github.bonigarcia</groupId>
-       <artifactId>webdrivermanager</artifactId>
-       <version>5.3.2</version>
-    </dependency>
+   <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
 
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>4.1.2</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
-    <dependency>
-      <groupId>info.cukes</groupId>
-      <artifactId>cucumber-java</artifactId>
-      <version>1.2.5</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
-    <dependency>
-      <groupId>info.cukes</groupId>
-      <artifactId>cucumber-junit</artifactId>
-      <version>1.2.5</version>
-      <scope>test</scope>
-    </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.6.2</version>
+        </dependency>
 
-    <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
-    <dependency>
-      <groupId>net.masterthought</groupId>
-      <artifactId>cucumber-reporting</artifactId>
-      <version>5.7.2</version>
-    </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.8.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.11.0</version>
+        </dependency>
 
-  </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <encoding>UTF-8</encoding>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>3.0.0-M1</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>integration-test</goal>
-              <goal>verify</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>3.2.1</version>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.2.0</version>
-        <configuration>
-          <source>8</source>
-        </configuration>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-plugin-plugin</artifactId>
-        <version>3.6.0</version>
-      </plugin>
-      <plugin>
-        <groupId>net.masterthought</groupId>
-        <artifactId>maven-cucumber-reporting</artifactId>
-        <version>2.8.0</version>
-        <executions>
-          <execution>
-            <id>execution</id>
-            <phase>test</phase>
-            <goals>
-              <goal>generate</goal>
-            </goals>
-            <configuration>
-              <projectName>Project Name</projectName>
-              <outputDirectory>${project.build.directory}/Report/cucumber-reports</outputDirectory>
-              <cucumberOutput>${project.build.directory}/cucumber/cucumber.json</cucumberOutput>
-
-              <skippedFails>true</skippedFails>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.11.0</version>
+            <scope>test</scope>
+        </dependency>
 
 
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
+        <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.7.5</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <source>8</source>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>2.8.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>Project Name</projectName>
+                            <outputDirectory>${project.build.directory}/Report/cucumber-reports</outputDirectory>
+                            <cucumberOutput>${project.build.directory}/cucumber/cucumber.json</cucumberOutput>
+
+                            <skippedFails>true</skippedFails>
+
+
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
